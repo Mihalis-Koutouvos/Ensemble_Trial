@@ -1,11 +1,21 @@
 import json
 import os
 import pandas as pd
-from datetime import datetime
 
 
 #Loads in raw API data from the Instagram platform. 
 def ingest_instagram_data(path):
+    """
+    Loads in raw API data from the Instagram platform to then be processed and 
+    turned into a dataframe for further analysis
+
+    Parameters:
+    path (str): File path to raw csv file
+
+    Return:
+    DataFrame of the raw data we collected from the API
+    """
+
     #Define list to hold all Instagram posts
     instagram_post_collection = []
     instagram_entries = os.listdir(path)

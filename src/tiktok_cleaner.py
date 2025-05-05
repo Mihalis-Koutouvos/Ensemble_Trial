@@ -1,11 +1,20 @@
 import json
 import os
 import pandas as pd
-from datetime import datetime
 
 
 #Loads in raw API data from the TikTok platform. 
 def ingest_tiktok_data(path):
+    """
+    Loads in raw API data from the TikTok platform to then be processed and 
+    turned into a dataframe for further analysis
+
+    Parameters:
+    path (str): File path to raw csv file
+
+    Return:
+    DataFrame of the raw data we collected from the API
+    """
     #Define list to hold all TikTok posts
     tiktok_post_collection = []
     tiktok_entries = os.listdir(path)
